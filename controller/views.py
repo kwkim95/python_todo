@@ -1,6 +1,6 @@
-from todoMgrSystem.entity.models import Todo
-from todoMgrSystem.exception.exception import DuplicationError, NotFoundError
-from todoMgrSystem.dao.file_registry import save_file, init_data_load
+from entity.models import Todo
+from exception.exception import DuplicationError, NotFoundError
+from dao.file_registry import save_file, init_data_load
 persons = []
 
 

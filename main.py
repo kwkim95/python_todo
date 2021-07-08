@@ -1,8 +1,8 @@
-from todoMgrSystem.entity.models import Todo
-from todoMgrSystem.view.templates import menu_display, menu_select, list_display, input_display, id_input_display, \
+from entity.models import Todo
+from view.templates import menu_display, menu_select, list_display, input_display, id_input_display, \
     message_display, person_display, submenu_display, update_input_display
-from todoMgrSystem.controller.views import TodoController
-from todoMgrSystem.exception.exception import DuplicationError, NotFoundError
+from controller.views import TodoController
+from exception.exception import DuplicationError, NotFoundError
 
 TodoController.load_list()
 

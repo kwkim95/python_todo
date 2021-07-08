@@ -1,4 +1,4 @@
-from todoMgrSystem.entity.models import Todo
+from entity.models import Todo
 
 
 # menu display
