@@ -1,5 +1,5 @@
 from entity.models import Todo
-
+import uuid
 
 # menu display
 def menu_display():
@@ -42,7 +42,7 @@ def list_display(persons):
 
 # register person input
 def input_display(id):
-    id = input("아이디를 입력하세요 : ")
+    id = uuid.uuid1()
     title = input("제목을 입력하세요 : ")
     contents = input("내용을 입력하세요 : ")
     date = input("날짜을 입력하세요 : ")

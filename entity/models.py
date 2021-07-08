@@ -7,5 +7,5 @@ class Todo:
         self.done = done
 
     def info(self):
-        return "아이디 : " + self.id + " 제목 : " + self.title + " 내용 : " + self.contents + " 날짜 : " + self.date + " 마감 : " + self.done
+        return "아이디 : " + str(self.id) + " 제목 : " + self.title + " 내용 : " + self.contents + " 날짜 : " + self.date + " 마감 : " + self.done
 

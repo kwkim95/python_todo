@@ -4,8 +4,12 @@ persons = []
 
 
 class TodoController:
-    def __init__(self, id):
+    def __init__(self, id, title, contents, date, done):
         self.id = id
+        self.title = title
+        self.contents = contents
+        self.date = date
+        self.done = done
 
     @staticmethod
     def register(person):

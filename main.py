@@ -22,7 +22,7 @@ while True:
                 person = input_display(sub_menu)
                 try:
                     TodoController.register(person)
-                    message_display(person.id + " 등록 성공")
+                    message_display(str(person.id) + " 등록 성공")
                 except DuplicationError as e:
                     message_display(e)
 
