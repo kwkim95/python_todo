@@ -1,6 +1,6 @@
 from entity.models import Todo
 from view.templates import menu_display, menu_select, list_display, input_display, id_input_display, \
-    message_display, person_display, submenu_display, update_input_display
+    message_display, person_display, submenu_display, update_input_display, find_input_display, infomenu_display
 from controller.views import TodoController
 from exception.exception import DuplicationError, NotFoundError
 
@@ -55,10 +55,31 @@ while True:
             message_display(e)
 
     elif menu == "5":
-        id = id_input_display("검색")
         try:
-            person = TodoController.getPerson(id)
-            person_display(person)
+            while True:
+                infomenu_display()
+                menu = menu_select()
+                if menu == "0":
+                    break
+                id = find_input_display("검색")
+
+                if menu == "1":
+                    person = TodoController.getPerson_id(id)
+
+                elif menu == "2":
+                    person = TodoController.getPerson_title(id)
+
+                elif menu == "3":
+                    person = TodoController.getPerson_contents(id)
+
+                elif menu == "4":
+                    person = TodoController.getPerson_date(id)
+
+                elif menu == "5":
+                    person = TodoController.getPerson_done(id)
+
+                person_display(person)
+
         except NotFoundError as e:
             message_display(e)
 

@@ -1,5 +1,6 @@
 from entity.models import Todo
 
+
 # menu display
 def menu_display():
     print("======= 일정관리 시스템 =======")
@@ -15,6 +16,15 @@ def menu_display():
 def submenu_display():
     print("1. 등록")
     print("2. main menu 이동")
+
+
+def infomenu_display():
+    print("1. id")
+    print("2. title")
+    print("3. contents")
+    print("4. date")
+    print("5. done")
+    print("0. 종료")
 
 
 # menu select
@@ -43,10 +53,16 @@ def input_display(id):
 
 # 수정하거나 삭제 또는 상세보기 위한 id 입력 확인
 def id_input_display(command):
-    id = input("{0} 수정할 id는 ? ".format(command))
+    id = input("{0}할 id는 ? ".format(command))
     return id
 
 
+# 상세보기 위한 정보 입력 확인
+def find_input_display(command):
+    f = input("{0}할 정보는 ? ".format(command))
+    return f
+
+    
 # update input data
 def update_input_display(type, id):
     title = input("이름을 입력하세요 : ")
