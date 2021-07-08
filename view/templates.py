@@ -1,9 +1,8 @@
 from entity.models import Todo
 
-
 # menu display
 def menu_display():
-    print("======= 인사관리 시스템 =======")
+    print("======= 일정관리 시스템 =======")
     print("1. 전체 목록 보기 ")
     print("2. 등록 ")
     print("3. 수정 ")

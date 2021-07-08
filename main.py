@@ -64,7 +64,7 @@ while True:
 
     elif menu == "0":
         TodoController.save_list()
-        message_display("인사시스템을 종료합니다.")
+        message_display("일정관리 시스템을 종료합니다.")
         break
     else:
         print()
